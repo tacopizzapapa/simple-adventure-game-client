@@ -1,0 +1,29 @@
+.GameState {
+  padding: 2rem 4rem;
+  color: #555555;
+  transition: background-color 0.5s ease-out;
+
+  &[data-win-state="true"] {
+    background-color: #00aa00;
+    color: #ffffff;
+  }
+
+  &[data-win-state="false"] {
+    background-color: #aa0000;
+    color: #ffffff;
+  }
+
+  &__description {
+    font-size: 1.8rem;
+  }
+
+  &__transitions {
+    list-style: none;
+  }
+
+  &__transition {
+    font-size: 1.5rem;
+  }
+
+}
+
