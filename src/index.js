@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import './index.scss';
-import gameDefinition from './games/simpleDemoGame.json';
+import gameDefinition from './games/stuckInTheSupplyClosetDemoGame.json';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

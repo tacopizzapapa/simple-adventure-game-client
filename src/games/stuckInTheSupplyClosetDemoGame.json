@@ -1,0 +1,217 @@
+{
+  "title": "The Supply Closet",
+  "description": "A quick trip to the supply closet gone wrong.",
+  "initialState": "start",
+  "transitions": [
+    {
+      "id": "to-what-happened",
+      "description": "What happened?",
+      "nextState": "what-happened",
+      "type": "simple"
+    },
+    {
+      "id": "to-what-did-i-do",
+      "description": "What did I do?",
+      "nextState": "what-did-i-do",
+      "type": "simple"
+    },
+    {
+      "id": "to-i-didnt-do-anything",
+      "description": "I didn't do anything",
+      "nextState": "i-didnt-do-anything",
+      "type": "simple"
+    },
+    {
+      "id": "to-try-the-door",
+      "description": "Try the door",
+      "nextState": "try-the-door",
+      "type": "simple"
+    },
+    {
+      "id": "to-why-was-i-here",
+      "description": "Why was I in a supply closet?",
+      "nextState": "why-was-i-here",
+      "type": "simple"
+    },
+    {
+      "id": "to-what-kind-of-analogy-is-that",
+      "description": "What kind of analogy is that?!",
+      "nextState": "what-kind-of-analogy-is-that",
+      "type": "simple"
+    },
+    {
+      "id": "to-unlock-the-door",
+      "description": "Unlock the door",
+      "nextState": "unlock-the-door",
+      "type": "simple"
+    },
+    {
+      "id": "to-why-would-the-supply-closet-lock",
+      "description": "Why would the supply closet lock?",
+      "nextState": "why-would-the-supply-closet-lock",
+      "type": "simple"
+    },
+    {
+      "id": "to-what-kind-of-supplies",
+      "description": "What kind of supplies?",
+      "nextState": "what-kind-of-supplies",
+      "type": "simple"
+    },
+    {
+      "id": "to-how-do-i-know",
+      "description": "How do I know the door is locked?",
+      "nextState": "how-do-i-know",
+      "type": "simple"
+    },
+    {
+      "id": "to-dont-appreciate-being-talked-to-this-way",
+      "description": "I don't appreciate being talked to this way...",
+      "nextState": "dont-appreciate-being-talked-to-this-way",
+      "type": "simple"
+    },
+    {
+      "id": "to-fine-i-will",
+      "description": "Fine I will",
+      "nextState": "fine-i-will",
+      "type": "simple"
+    },
+    {
+      "id": "to-why-not",
+      "description": "Why not?",
+      "nextState": "why-not",
+      "type": "simple"
+    },
+    {
+      "id": "to-whos-paying-you",
+      "description": "Who's paying you?",
+      "nextState": "whos-paying-you",
+      "type": "simple"
+    },
+    {
+      "id": "to-yes-its-important",
+      "description": "Yes",
+      "nextState": "yes-its-important",
+      "type": "simple"
+    },
+    {
+      "id": "to-i-dont-trust-you",
+      "description": "I don't trust you",
+      "nextState": "i-dont-trust-you",
+      "type": "simple"
+    },
+    {
+      "id": "to-i-dont-know-who-you-are",
+      "description": "I don't even know who you are",
+      "nextState": "i-dont-know-who-you-are",
+      "type": "simple"
+    },
+    {
+      "id": "to-its-dark",
+      "description": "It's dark?",
+      "nextState": "its-dark",
+      "type": "simple"
+    },
+    {
+      "id": "to-getting-to-know-you",
+      "description": "I'm just trying to get to know you a little",
+      "nextState": "getting-to-know-you",
+      "type": "simple"
+    }
+  ],
+  "states": [
+    {
+      "id": "start",
+      "transitions": [ "to-what-happened" ],
+      "description": "Creeeeeak ... SLAM! ... *Click*"
+    },
+    {
+      "id": "what-happened",
+      "description": "You've really done it this time.",
+      "transitions": [ "to-what-did-i-do", "to-i-didnt-do-anything" ]
+    },
+    {
+      "id": "what-did-i-do",
+      "description": "You've locked yourself in the supply closet",
+      "transitions": [ "to-try-the-door", "to-why-was-i-here" ]
+    },
+    {
+      "id": "i-didnt-do-anything",
+      "description": "And that's the problem. You hear a door closing and locking and you just stand there like a baby with a dirty diaper.",
+      "transitions": [ "to-try-the-door", "to-what-kind-of-analogy-is-that" ]
+    },
+    {
+      "id": "try-the-door",
+      "description": "The locked door appears to be locked",
+      "transitions": [ "to-unlock-the-door", "to-why-would-the-supply-closet-lock" ]
+    },
+    {
+      "id": "why-was-i-here",
+      "description": "Because you needed supplies",
+      "transitions": [ "to-what-kind-of-supplies", "to-try-the-door" ]
+    },
+    {
+      "id": "what-kind-of-analogy-is-that",
+      "description": "What kind of person gets locked in a supply closet and spends their time arguing with the narrator over diaper analogies?",
+      "transitions": [ "to-how-do-i-know", "to-dont-appreciate-being-talked-to-this-way" ]
+    },
+    {
+      "id": "unlock-the-door",
+      "description": "You aren't even able to see the door",
+      "transitions": [ "to-why-not" ]
+    },
+    {
+      "id": "why-would-the-supply-closet-lock",
+      "description": "I didn't design the building, I'm just here for the paycheck",
+      "transitions": [ "to-unlock-the-door", "to-whos-paying-you" ]
+    },
+    {
+      "id": "what-kind-of-supplies",
+      "description": "Is that really important right now?!",
+      "transitions": [ "to-yes-its-important", "to-try-the-door" ]
+    },
+    {
+      "id": "how-do-i-know",
+      "description": "Do you not trust me?",
+      "transitions": [ "to-i-dont-trust-you", "to-i-dont-know-who-you-are" ]
+    },
+    {
+      "id": "dont-appreciate-being-talked-to-this-way",
+      "description": "Fine, you can just sit here in the dark",
+      "transitions": [ "to-its-dark", "to-fine-i-will" ]
+    },
+    {
+      "id": "why-not",
+      "description": "Because it's dark!",
+      "transitions": [ "to-its-dark" ]
+    },
+    {
+      "id": "whos-paying-you",
+      "description": "The studio of course. I don't see how that matters to your current situation.",
+      "transitions": [ "to-getting-to-know-you", "to-unlock-the-door" ]
+    },
+    {
+      "id": "yes-its-important",
+      "description": "TODO"
+    },
+    {
+      "id": "i-dont-trust-you",
+      "description": "TODO"
+    },
+    {
+      "id": "i-dont-know-who-you-are",
+      "description": "TODO"
+    },
+    {
+      "id": "its-dark",
+      "description": "TODO"
+    },
+    {
+      "id": "fine-i-will",
+      "description": "Well then, I guess that's the end."
+    },
+    {
+      "id": "getting-to-know-you",
+      "description": "TODO"
+    }
+  ]
+}
