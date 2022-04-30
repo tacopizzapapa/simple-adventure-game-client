@@ -33,7 +33,7 @@ function GameClient( props ) {
                 <p className="GameState__description">{state.description}</p>
                 <ol className="GameState__transitions">
                     {state.transitions.map( transition => (
-                        <li className="GameState__transition" onClick={() => handleTransition( transition )}>{transition.description}</li>
+                        <li key={transition.id} className="GameState__transition" onClick={() => handleTransition( transition )}>{transition.description}</li>
                     ))}
                 </ol>
                 {state.transitions.length === 0 && (

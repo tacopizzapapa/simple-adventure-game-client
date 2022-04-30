@@ -1,7 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Mono:wght@300&display=swap');
+
+$font-family-noto: 'Noto Sans Mono', monospace;
+$font-family-primary: $font-family-noto;
+
+.App__header {
+  display: none;
+}
+
 .GameState {
   padding: 2rem 4rem;
   color: #555555;
   transition: background-color 0.5s ease-out;
+  font-family: $font-family-primary;
 
   &[data-win-state="true"] {
     background-color: #00aa00;
